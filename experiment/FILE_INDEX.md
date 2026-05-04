@@ -79,7 +79,6 @@ results/
 
 | 文件 | 描述 | 长度 |
 |------|------|------|
-| `README.md` | 项目说明 | 简短 |
 | `QUICK_START.md` | 快速开始指南 | 中等 |
 | `PROJECT_DOCUMENTATION.md` | 完整文档 | 长 (12 章) |
 | `COMPLETION_REPORT.md` | 完成报告 | 长 |
@@ -177,36 +176,6 @@ experiment/
 
 ---
 
-## 使用场景
-
-### 📌 场景 1: 我想快速了解项目
-
-→ 阅读顺序:
-1. `README.md` (2 分钟)
-2. `QUICK_START.md` (5 分钟)
-3. 运行 `python process_complete_dataset.py` (1 分钟)
-
-### 📌 场景 2: 我想深入理解技术细节
-
-→ 阅读顺序:
-1. `QUICK_START.md`
-2. `PROJECT_DOCUMENTATION.md` (20 分钟)
-3. 查看源代码注释
-
-### 📌 场景 3: 我想处理自己的数据
-
-→ 操作步骤:
-1. 将数据放在 `Data/` 目录
-2. 修改脚本中的 `data_file` 路径
-3. 运行脚本
-
-### 📌 场景 4: 我想对比和分析结果
-
-→ 操作步骤:
-1. 运行 `python compare_results.py`
-2. 查看 `result_comp/experiment_summary.json`
-3. 分析输出的对比报告
-
 ---
 
 ## 关键概念速查
@@ -246,30 +215,6 @@ experiment/
 | Python | 3.10.1 | - |
 | PyTorch | 2.11.0 | - |
 | Lark | 1.3.1 | - |
-
----
-
-## 下一步建议
-
-### 📚 学习路径
-1. ✅ 阅读 QUICK_START.md
-2. ✅ 运行 process_complete_dataset.py
-3. ✅ 查看 result_comp/ 中的输出
-4. ⏳ 阅读 PROJECT_DOCUMENTATION.md
-5. ⏳ 修改代码进行自定义处理
-
-### 🔍 探索方向
-- [ ] 修改 python_grammar.lark 添加更多规则
-- [ ] 处理自己的数据集
-- [ ] 集成到 LLM 推理流程
-- [ ] 并行处理优化
-
----
-
-**最后更新**: 2025年1月  
-**总文件数**: 15+  
-**总代码行数**: 1500+  
-**文档页数**: 20+
 
 ---
 
