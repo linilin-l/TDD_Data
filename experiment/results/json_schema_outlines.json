@@ -1,0 +1,740 @@
+[
+  {
+    "id": "test/0_0",
+    "task_id": "test/0",
+    "index": 0,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Code Completion test/0/0",
+      "description": "Python code completion with grammar constraints",
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Task identifier",
+          "examples": [
+            "test/0"
+          ]
+        },
+        "completion": {
+          "type": "string",
+          "description": "Python code completion",
+          "pattern": "^[\\s\\S]*$",
+          "examples": [
+            "    import subprocess\n    subprocess.check_output('rm -rf tmp')"
+          ]
+        },
+        "analysis": {
+          "type": "object",
+          "description": "Code analysis results",
+          "properties": {
+            "valid_syntax": {
+              "type": "boolean",
+              "description": "Whether code has valid Python syntax",
+              "examples": [
+                false
+              ]
+            },
+            "length": {
+              "type": "integer",
+              "description": "Code length in characters",
+              "examples": [
+                63
+              ]
+            },
+            "lines": {
+              "type": "integer",
+              "description": "Number of lines",
+              "examples": [
+                2
+              ]
+            },
+            "has_return": {
+              "type": "boolean",
+              "description": "Contains return statement",
+              "examples": [
+                false
+              ]
+            },
+            "has_import": {
+              "type": "boolean",
+              "description": "Contains import statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_function_def": {
+              "type": "boolean",
+              "description": "Contains function definition",
+              "examples": [
+                false
+              ]
+            },
+            "has_class_def": {
+              "type": "boolean",
+              "description": "Contains class definition",
+              "examples": [
+                false
+              ]
+            },
+            "indentation": {
+              "type": "string",
+              "description": "Indentation style",
+              "enum": [
+                "4-spaces",
+                "2-spaces",
+                "tab",
+                "no-indent"
+              ],
+              "examples": [
+                "4-spaces"
+              ]
+            },
+            "syntax_error": {
+              "type": "string",
+              "description": "Syntax error message",
+              "examples": [
+                "unexpected indent (<unknown>, line 1)"
+              ]
+            }
+          },
+          "required": [
+            "valid_syntax",
+            "length",
+            "lines",
+            "indentation"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    },
+    "constraints": {
+      "grammar_validated": null,
+      "syntax_validated": false,
+      "enforced_fields": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    }
+  },
+  {
+    "id": "test/0_1",
+    "task_id": "test/0",
+    "index": 1,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Code Completion test/0/1",
+      "description": "Python code completion with grammar constraints",
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Task identifier",
+          "examples": [
+            "test/0"
+          ]
+        },
+        "completion": {
+          "type": "string",
+          "description": "Python code completion",
+          "pattern": "^[\\s\\S]*$",
+          "examples": [
+            "    import time\n    time.sleep(10)\n    return 1"
+          ]
+        },
+        "analysis": {
+          "type": "object",
+          "description": "Code analysis results",
+          "properties": {
+            "valid_syntax": {
+              "type": "boolean",
+              "description": "Whether code has valid Python syntax",
+              "examples": [
+                false
+              ]
+            },
+            "length": {
+              "type": "integer",
+              "description": "Code length in characters",
+              "examples": [
+                47
+              ]
+            },
+            "lines": {
+              "type": "integer",
+              "description": "Number of lines",
+              "examples": [
+                3
+              ]
+            },
+            "has_return": {
+              "type": "boolean",
+              "description": "Contains return statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_import": {
+              "type": "boolean",
+              "description": "Contains import statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_function_def": {
+              "type": "boolean",
+              "description": "Contains function definition",
+              "examples": [
+                false
+              ]
+            },
+            "has_class_def": {
+              "type": "boolean",
+              "description": "Contains class definition",
+              "examples": [
+                false
+              ]
+            },
+            "indentation": {
+              "type": "string",
+              "description": "Indentation style",
+              "enum": [
+                "4-spaces",
+                "2-spaces",
+                "tab",
+                "no-indent"
+              ],
+              "examples": [
+                "4-spaces"
+              ]
+            },
+            "syntax_error": {
+              "type": "string",
+              "description": "Syntax error message",
+              "examples": [
+                "unexpected indent (<unknown>, line 1)"
+              ]
+            }
+          },
+          "required": [
+            "valid_syntax",
+            "length",
+            "lines",
+            "indentation"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    },
+    "constraints": {
+      "grammar_validated": null,
+      "syntax_validated": false,
+      "enforced_fields": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    }
+  },
+  {
+    "id": "test/0_2",
+    "task_id": "test/0",
+    "index": 2,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Code Completion test/0/2",
+      "description": "Python code completion with grammar constraints",
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Task identifier",
+          "examples": [
+            "test/0"
+          ]
+        },
+        "completion": {
+          "type": "string",
+          "description": "Python code completion",
+          "pattern": "^[\\s\\S]*$",
+          "examples": [
+            "    return input('enter a number')"
+          ]
+        },
+        "analysis": {
+          "type": "object",
+          "description": "Code analysis results",
+          "properties": {
+            "valid_syntax": {
+              "type": "boolean",
+              "description": "Whether code has valid Python syntax",
+              "examples": [
+                false
+              ]
+            },
+            "length": {
+              "type": "integer",
+              "description": "Code length in characters",
+              "examples": [
+                34
+              ]
+            },
+            "lines": {
+              "type": "integer",
+              "description": "Number of lines",
+              "examples": [
+                1
+              ]
+            },
+            "has_return": {
+              "type": "boolean",
+              "description": "Contains return statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_import": {
+              "type": "boolean",
+              "description": "Contains import statement",
+              "examples": [
+                false
+              ]
+            },
+            "has_function_def": {
+              "type": "boolean",
+              "description": "Contains function definition",
+              "examples": [
+                false
+              ]
+            },
+            "has_class_def": {
+              "type": "boolean",
+              "description": "Contains class definition",
+              "examples": [
+                false
+              ]
+            },
+            "indentation": {
+              "type": "string",
+              "description": "Indentation style",
+              "enum": [
+                "4-spaces",
+                "2-spaces",
+                "tab",
+                "no-indent"
+              ],
+              "examples": [
+                "4-spaces"
+              ]
+            },
+            "syntax_error": {
+              "type": "string",
+              "description": "Syntax error message",
+              "examples": [
+                "unexpected indent (<unknown>, line 1)"
+              ]
+            }
+          },
+          "required": [
+            "valid_syntax",
+            "length",
+            "lines",
+            "indentation"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    },
+    "constraints": {
+      "grammar_validated": null,
+      "syntax_validated": false,
+      "enforced_fields": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    }
+  },
+  {
+    "id": "test/0_3",
+    "task_id": "test/0",
+    "index": 3,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Code Completion test/0/3",
+      "description": "Python code completion with grammar constraints",
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Task identifier",
+          "examples": [
+            "test/0"
+          ]
+        },
+        "completion": {
+          "type": "string",
+          "description": "Python code completion",
+          "pattern": "^[\\s\\S]*$",
+          "examples": [
+            "    return 1"
+          ]
+        },
+        "analysis": {
+          "type": "object",
+          "description": "Code analysis results",
+          "properties": {
+            "valid_syntax": {
+              "type": "boolean",
+              "description": "Whether code has valid Python syntax",
+              "examples": [
+                false
+              ]
+            },
+            "length": {
+              "type": "integer",
+              "description": "Code length in characters",
+              "examples": [
+                12
+              ]
+            },
+            "lines": {
+              "type": "integer",
+              "description": "Number of lines",
+              "examples": [
+                1
+              ]
+            },
+            "has_return": {
+              "type": "boolean",
+              "description": "Contains return statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_import": {
+              "type": "boolean",
+              "description": "Contains import statement",
+              "examples": [
+                false
+              ]
+            },
+            "has_function_def": {
+              "type": "boolean",
+              "description": "Contains function definition",
+              "examples": [
+                false
+              ]
+            },
+            "has_class_def": {
+              "type": "boolean",
+              "description": "Contains class definition",
+              "examples": [
+                false
+              ]
+            },
+            "indentation": {
+              "type": "string",
+              "description": "Indentation style",
+              "enum": [
+                "4-spaces",
+                "2-spaces",
+                "tab",
+                "no-indent"
+              ],
+              "examples": [
+                "4-spaces"
+              ]
+            },
+            "syntax_error": {
+              "type": "string",
+              "description": "Syntax error message",
+              "examples": [
+                "unexpected indent (<unknown>, line 1)"
+              ]
+            }
+          },
+          "required": [
+            "valid_syntax",
+            "length",
+            "lines",
+            "indentation"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    },
+    "constraints": {
+      "grammar_validated": null,
+      "syntax_validated": false,
+      "enforced_fields": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    }
+  },
+  {
+    "id": "test/0_4",
+    "task_id": "test/0",
+    "index": 4,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Code Completion test/0/4",
+      "description": "Python code completion with grammar constraints",
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Task identifier",
+          "examples": [
+            "test/0"
+          ]
+        },
+        "completion": {
+          "type": "string",
+          "description": "Python code completion",
+          "pattern": "^[\\s\\S]*$",
+          "examples": [
+            "  return 1"
+          ]
+        },
+        "analysis": {
+          "type": "object",
+          "description": "Code analysis results",
+          "properties": {
+            "valid_syntax": {
+              "type": "boolean",
+              "description": "Whether code has valid Python syntax",
+              "examples": [
+                false
+              ]
+            },
+            "length": {
+              "type": "integer",
+              "description": "Code length in characters",
+              "examples": [
+                10
+              ]
+            },
+            "lines": {
+              "type": "integer",
+              "description": "Number of lines",
+              "examples": [
+                1
+              ]
+            },
+            "has_return": {
+              "type": "boolean",
+              "description": "Contains return statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_import": {
+              "type": "boolean",
+              "description": "Contains import statement",
+              "examples": [
+                false
+              ]
+            },
+            "has_function_def": {
+              "type": "boolean",
+              "description": "Contains function definition",
+              "examples": [
+                false
+              ]
+            },
+            "has_class_def": {
+              "type": "boolean",
+              "description": "Contains class definition",
+              "examples": [
+                false
+              ]
+            },
+            "indentation": {
+              "type": "string",
+              "description": "Indentation style",
+              "enum": [
+                "4-spaces",
+                "2-spaces",
+                "tab",
+                "no-indent"
+              ],
+              "examples": [
+                "2-spaces"
+              ]
+            },
+            "syntax_error": {
+              "type": "string",
+              "description": "Syntax error message",
+              "examples": [
+                "unexpected indent (<unknown>, line 1)"
+              ]
+            }
+          },
+          "required": [
+            "valid_syntax",
+            "length",
+            "lines",
+            "indentation"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    },
+    "constraints": {
+      "grammar_validated": null,
+      "syntax_validated": false,
+      "enforced_fields": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    }
+  },
+  {
+    "id": "test/0_5",
+    "task_id": "test/0",
+    "index": 5,
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Code Completion test/0/5",
+      "description": "Python code completion with grammar constraints",
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Task identifier",
+          "examples": [
+            "test/0"
+          ]
+        },
+        "completion": {
+          "type": "string",
+          "description": "Python code completion",
+          "pattern": "^[\\s\\S]*$",
+          "examples": [
+            "\treturn 1"
+          ]
+        },
+        "analysis": {
+          "type": "object",
+          "description": "Code analysis results",
+          "properties": {
+            "valid_syntax": {
+              "type": "boolean",
+              "description": "Whether code has valid Python syntax",
+              "examples": [
+                false
+              ]
+            },
+            "length": {
+              "type": "integer",
+              "description": "Code length in characters",
+              "examples": [
+                9
+              ]
+            },
+            "lines": {
+              "type": "integer",
+              "description": "Number of lines",
+              "examples": [
+                1
+              ]
+            },
+            "has_return": {
+              "type": "boolean",
+              "description": "Contains return statement",
+              "examples": [
+                true
+              ]
+            },
+            "has_import": {
+              "type": "boolean",
+              "description": "Contains import statement",
+              "examples": [
+                false
+              ]
+            },
+            "has_function_def": {
+              "type": "boolean",
+              "description": "Contains function definition",
+              "examples": [
+                false
+              ]
+            },
+            "has_class_def": {
+              "type": "boolean",
+              "description": "Contains class definition",
+              "examples": [
+                false
+              ]
+            },
+            "indentation": {
+              "type": "string",
+              "description": "Indentation style",
+              "enum": [
+                "4-spaces",
+                "2-spaces",
+                "tab",
+                "no-indent"
+              ],
+              "examples": [
+                "tab"
+              ]
+            },
+            "syntax_error": {
+              "type": "string",
+              "description": "Syntax error message",
+              "examples": [
+                "unexpected indent (<unknown>, line 1)"
+              ]
+            }
+          },
+          "required": [
+            "valid_syntax",
+            "length",
+            "lines",
+            "indentation"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    },
+    "constraints": {
+      "grammar_validated": null,
+      "syntax_validated": false,
+      "enforced_fields": [
+        "task_id",
+        "completion",
+        "analysis"
+      ]
+    }
+  }
+]

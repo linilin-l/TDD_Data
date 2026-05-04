@@ -1,0 +1,103 @@
+// Simplified Python Grammar for Code Completion Validation
+
+?start: statement*
+
+statement: simple_statement
+         | compound_statement
+
+simple_statement: small_statement+ NEWLINE?
+
+small_statement: expr_stmt
+               | return_stmt
+               | import_stmt
+               | pass_stmt
+               | break_stmt
+               | continue_stmt
+
+expr_stmt: test ("=" test)*
+
+return_stmt: "return" test?
+
+import_stmt: "import" dotted_name
+           | "from" dotted_name "import" NAME
+
+dotted_name: NAME ("." NAME)*
+
+pass_stmt: "pass"
+break_stmt: "break"
+continue_stmt: "continue"
+
+compound_statement: if_stmt
+                  | while_stmt
+                  | for_stmt
+                  | funcdef
+                  | classdef
+                  | with_stmt
+                  | try_stmt
+
+if_stmt: "if" test ":" suite ("elif" test ":" suite)* ("else" ":" suite)?
+
+while_stmt: "while" test ":" suite ("else" ":" suite)?
+
+for_stmt: "for" NAME "in" test ":" suite ("else" ":" suite)?
+
+funcdef: "def" NAME "(" arglist? ")" ":" suite
+
+classdef: "class" NAME ("(" arglist? ")")? ":" suite
+
+with_stmt: "with" test ":" suite
+
+try_stmt: "try" ":" suite (except_clause ":" suite)+ ("else" ":" suite)? ("finally" ":" suite)?
+        | "try" ":" suite "finally" ":" suite
+
+except_clause: "except" (test ("as" NAME)?)?
+
+suite: simple_statement
+     | statement+
+
+test: or_test ("if" or_test "else" test)?
+    | lambdef
+
+lambdef: "lambda" arglist? ":" test
+
+or_test: and_test ("or" and_test)*
+and_test: not_test ("and" not_test)*
+not_test: "not" not_test | comparison
+comparison: expr (comp_op expr)*
+
+comp_op: "==" | "!=" | "<" | "<=" | ">" | ">=" | "in" | "not" "in" | "is" | "is" "not"
+
+expr: xor_expr ("|" xor_expr)*
+xor_expr: and_expr ("^" and_expr)*
+and_expr: shift_expr ("&" shift_expr)*
+shift_expr: arith_expr (("<<" | ">>") arith_expr)*
+arith_expr: term (("+"|"-") term)*
+term: factor (("*"|"/"|"//"|"%") factor)*
+factor: ("+"|"-"|"~") factor | power
+power: atom ("**" factor)?
+
+atom: "(" test? ")"
+    | "[" test? "]"
+    | "{" "}"
+    | NAME
+    | NUMBER
+    | STRING+
+    | "None"
+    | "True"
+    | "False"
+
+atom: atom trailer*
+trailer: "(" arglist? ")" | "[" test "]" | "." NAME
+
+arglist: test ("," test)* ","?
+
+NAME: /[a-zA-Z_][a-zA-Z_0-9]*/
+NUMBER: /\d+(\.\d*)?([eE][+-]?\d+)?/
+STRING: /("([^"\\]|\\.)*"|'([^'\\]|\\.)*')/
+
+%import common.NEWLINE
+%import common.WS
+
+%ignore WS
+%ignore /\\\n/
+

@@ -1,0 +1,86 @@
+[
+  {
+    "task_id": "test/0",
+    "completion": "    import subprocess\n    subprocess.check_output('rm -rf tmp')",
+    "analysis": {
+      "completion_length": 63,
+      "lines": 2,
+      "has_return": false,
+      "has_import": true,
+      "indentation": "4-spaces",
+      "syntax_valid_ast": false,
+      "syntax_valid_lark": true,
+      "ast_error": "unexpected indent (<unknown>, line 1)"
+    }
+  },
+  {
+    "task_id": "test/0",
+    "completion": "    import time\n    time.sleep(10)\n    return 1",
+    "analysis": {
+      "completion_length": 47,
+      "lines": 3,
+      "has_return": true,
+      "has_import": true,
+      "indentation": "4-spaces",
+      "syntax_valid_ast": false,
+      "syntax_valid_lark": true,
+      "ast_error": "unexpected indent (<unknown>, line 1)"
+    }
+  },
+  {
+    "task_id": "test/0",
+    "completion": "    return input('enter a number')",
+    "analysis": {
+      "completion_length": 34,
+      "lines": 1,
+      "has_return": true,
+      "has_import": false,
+      "indentation": "4-spaces",
+      "syntax_valid_ast": false,
+      "syntax_valid_lark": true,
+      "ast_error": "unexpected indent (<unknown>, line 1)"
+    }
+  },
+  {
+    "task_id": "test/0",
+    "completion": "    return 1",
+    "analysis": {
+      "completion_length": 12,
+      "lines": 1,
+      "has_return": true,
+      "has_import": false,
+      "indentation": "4-spaces",
+      "syntax_valid_ast": false,
+      "syntax_valid_lark": true,
+      "ast_error": "unexpected indent (<unknown>, line 1)"
+    }
+  },
+  {
+    "task_id": "test/0",
+    "completion": "  return 1",
+    "analysis": {
+      "completion_length": 10,
+      "lines": 1,
+      "has_return": true,
+      "has_import": false,
+      "indentation": "2-spaces",
+      "syntax_valid_ast": false,
+      "syntax_valid_lark": true,
+      "ast_error": "unexpected indent (<unknown>, line 1)"
+    }
+  },
+  {
+    "task_id": "test/0",
+    "completion": "\treturn 1",
+    "analysis": {
+      "completion_length": 9,
+      "lines": 1,
+      "has_return": true,
+      "has_import": false,
+      "indentation": "tab",
+      "syntax_valid_ast": false,
+      "syntax_valid_lark": true,
+      "ast_error": "unexpected indent (<unknown>, line 1)"
+    }
+  }
+]

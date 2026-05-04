@@ -1,0 +1,26 @@
+{
+  "experiment": "Grammar-Constrained Decoding with GreatGramma - Complete Dataset",
+  "data_source": "HumanEval.jsonl.gz",
+  "statistics": {
+    "total_records": 164,
+    "valid_ast_syntax": 164,
+    "valid_lark_grammar": 164,
+    "validity_rate_ast": "100.0%",
+    "validity_rate_lark": "100.0%"
+  },
+  "indentation_distribution": {
+    "4-spaces": 0,
+    "2-spaces": 0,
+    "tabs": 0,
+    "no-indent": 164
+  },
+  "code_features": {
+    "has_return": 0,
+    "has_import": 0
+  },
+  "output_files": {
+    "processed_samples": "D:\\新建文件夹\\A SCNU\\项目\\AI教育\\TDD\\experiment\\result_comp\\processed_samples.json",
+    "json_schema_outlines": "D:\\新建文件夹\\A SCNU\\项目\\AI教育\\TDD\\experiment\\result_comp\\json_schema_outlines.json",
+    "summary": "D:\\新建文件夹\\A SCNU\\项目\\AI教育\\TDD\\experiment\\result_comp\\experiment_summary.json"
+  }
+}
